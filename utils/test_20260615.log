@@ -1,0 +1,522 @@
+2026-06-15 21:20:39,013 - INFO - api_test_framework.core.api_client - 已设置默认请求头: {'Authorization': 'Bearer abc123'}
+2026-06-15 21:20:39,013 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,019 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,019 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,020 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/update | data={'id': 0}
+2026-06-15 21:20:39,025 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,026 - INFO - api_test_framework.core.assertions - [数值字段id为0-请求异常] 开始检查状态码...
+2026-06-15 21:20:39,027 - INFO - api_test_framework.core.assertions - [数值字段id为0-请求异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,027 - INFO - api_test_framework.core.assertions - [数值字段id为0-请求异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,027 - INFO - api_test_framework.core.assertions - [数值字段id为0-请求异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,027 - INFO - api_test_framework.core.assertions - [数值字段id为0-请求异常] 开始检查错误信息...
+2026-06-15 21:20:39,027 - INFO - api_test_framework.core.assertions - [数值字段id为0-请求异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,029 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,029 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,029 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,031 - INFO - api_test_framework.core.api_client - 已设置默认请求头: {'Authorization': 'Bearer abc123'}
+2026-06-15 21:20:39,032 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,037 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,037 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,039 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/update | data={'id': -100}
+2026-06-15 21:20:39,043 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,044 - INFO - api_test_framework.core.assertions - [数值字段id为负数-请求异常] 开始检查状态码...
+2026-06-15 21:20:39,044 - INFO - api_test_framework.core.assertions - [数值字段id为负数-请求异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,044 - INFO - api_test_framework.core.assertions - [数值字段id为负数-请求异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,044 - INFO - api_test_framework.core.assertions - [数值字段id为负数-请求异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,044 - INFO - api_test_framework.core.assertions - [数值字段id为负数-请求异常] 开始检查错误信息...
+2026-06-15 21:20:39,045 - INFO - api_test_framework.core.assertions - [数值字段id为负数-请求异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,046 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,046 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,047 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,049 - INFO - api_test_framework.core.api_client - 已设置默认请求头: {'Authorization': 'Bearer abc123'}
+2026-06-15 21:20:39,049 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,053 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,054 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,055 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/update | data={'id': 9999999999999999999}
+2026-06-15 21:20:39,060 - INFO - api_test_framework.core.api_client - 返回 404 | 耗时 0.00s
+2026-06-15 21:20:39,060 - INFO - api_test_framework.core.assertions - [数值字段id为超大值(超int范围)-请求异常] 开始检查状态码...
+2026-06-15 21:20:39,060 - INFO - api_test_framework.core.assertions - [数值字段id为超大值(超int范围)-请求异常] ✓ 状态码断言通过 (status=404)
+2026-06-15 21:20:39,060 - INFO - api_test_framework.core.assertions - [数值字段id为超大值(超int范围)-请求异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,060 - INFO - api_test_framework.core.assertions - [数值字段id为超大值(超int范围)-请求异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,060 - INFO - api_test_framework.core.assertions - [数值字段id为超大值(超int范围)-请求异常] 开始检查错误信息...
+2026-06-15 21:20:39,061 - INFO - api_test_framework.core.assertions - [数值字段id为超大值(超int范围)-请求异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,062 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,063 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,063 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,065 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,070 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,070 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,071 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'a', 'password': '123456'}
+2026-06-15 21:20:39,075 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,075 - INFO - api_test_framework.core.assertions - [用户名长度为最小值1个字符-合法登录] 开始检查状态码...
+2026-06-15 21:20:39,075 - INFO - api_test_framework.core.assertions - [用户名长度为最小值1个字符-合法登录] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,075 - INFO - api_test_framework.core.assertions - [用户名长度为最小值1个字符-合法登录] 开始检查字段存在: ['token', 'status']...
+2026-06-15 21:20:39,075 - INFO - api_test_framework.core.assertions - [用户名长度为最小值1个字符-合法登录] ✓ 字段存在断言通过 (2个字段)
+2026-06-15 21:20:39,075 - INFO - api_test_framework.core.assertions - [用户名长度为最小值1个字符-合法登录] 开始检查字段值...
+2026-06-15 21:20:39,076 - INFO - api_test_framework.core.assertions - [用户名长度为最小值1个字符-合法登录] ✓ 字段值断言通过
+2026-06-15 21:20:39,078 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,078 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,080 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,085 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,086 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,086 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': '1'}
+2026-06-15 21:20:39,092 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,092 - INFO - api_test_framework.core.assertions - [密码长度为最小值1个字符-合法登录] 开始检查状态码...
+2026-06-15 21:20:39,092 - INFO - api_test_framework.core.assertions - [密码长度为最小值1个字符-合法登录] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,092 - INFO - api_test_framework.core.assertions - [密码长度为最小值1个字符-合法登录] 开始检查字段存在: ['token', 'status']...
+2026-06-15 21:20:39,092 - INFO - api_test_framework.core.assertions - [密码长度为最小值1个字符-合法登录] ✓ 字段存在断言通过 (2个字段)
+2026-06-15 21:20:39,093 - INFO - api_test_framework.core.assertions - [密码长度为最小值1个字符-合法登录] 开始检查字段值...
+2026-06-15 21:20:39,093 - INFO - api_test_framework.core.assertions - [密码长度为最小值1个字符-合法登录] ✓ 字段值断言通过
+2026-06-15 21:20:39,095 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,095 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,097 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,102 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,102 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,103 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'abcdefghijklmnopqrstuvwxyz123456', 'password': '123456'}
+2026-06-15 21:20:39,108 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,108 - INFO - api_test_framework.core.assertions - [用户名长度为最大值32个字符-合法登录] 开始检查状态码...
+2026-06-15 21:20:39,108 - INFO - api_test_framework.core.assertions - [用户名长度为最大值32个字符-合法登录] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,108 - INFO - api_test_framework.core.assertions - [用户名长度为最大值32个字符-合法登录] 开始检查字段存在: ['token', 'status']...
+2026-06-15 21:20:39,108 - INFO - api_test_framework.core.assertions - [用户名长度为最大值32个字符-合法登录] ✓ 字段存在断言通过 (2个字段)
+2026-06-15 21:20:39,108 - INFO - api_test_framework.core.assertions - [用户名长度为最大值32个字符-合法登录] 开始检查字段值...
+2026-06-15 21:20:39,109 - INFO - api_test_framework.core.assertions - [用户名长度为最大值32个字符-合法登录] ✓ 字段值断言通过
+2026-06-15 21:20:39,111 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,111 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,114 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,119 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,119 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,120 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': 'abcdefghijklmnopqrstuvwxyz123456'}
+2026-06-15 21:20:39,125 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,126 - INFO - api_test_framework.core.assertions - [密码长度为最大值32个字符-合法登录] 开始检查状态码...
+2026-06-15 21:20:39,126 - INFO - api_test_framework.core.assertions - [密码长度为最大值32个字符-合法登录] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,126 - INFO - api_test_framework.core.assertions - [密码长度为最大值32个字符-合法登录] 开始检查字段存在: ['token', 'status']...
+2026-06-15 21:20:39,126 - INFO - api_test_framework.core.assertions - [密码长度为最大值32个字符-合法登录] ✓ 字段存在断言通过 (2个字段)
+2026-06-15 21:20:39,126 - INFO - api_test_framework.core.assertions - [密码长度为最大值32个字符-合法登录] 开始检查字段值...
+2026-06-15 21:20:39,127 - INFO - api_test_framework.core.assertions - [密码长度为最大值32个字符-合法登录] ✓ 字段值断言通过
+2026-06-15 21:20:39,128 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,129 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,132 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,137 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,138 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,139 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': '', 'password': '123456'}
+2026-06-15 21:20:39,145 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,146 - INFO - api_test_framework.core.assertions - [用户名为空字符串(长度0)-登录异常] 开始检查状态码...
+2026-06-15 21:20:39,146 - INFO - api_test_framework.core.assertions - [用户名为空字符串(长度0)-登录异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,146 - INFO - api_test_framework.core.assertions - [用户名为空字符串(长度0)-登录异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,146 - INFO - api_test_framework.core.assertions - [用户名为空字符串(长度0)-登录异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,146 - INFO - api_test_framework.core.assertions - [用户名为空字符串(长度0)-登录异常] 开始检查错误信息...
+2026-06-15 21:20:39,146 - INFO - api_test_framework.core.assertions - [用户名为空字符串(长度0)-登录异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,147 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,148 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,150 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,154 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,155 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,156 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': ''}
+2026-06-15 21:20:39,162 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,162 - INFO - api_test_framework.core.assertions - [密码为空字符串(长度0)-登录异常] 开始检查状态码...
+2026-06-15 21:20:39,162 - INFO - api_test_framework.core.assertions - [密码为空字符串(长度0)-登录异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,162 - INFO - api_test_framework.core.assertions - [密码为空字符串(长度0)-登录异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,162 - INFO - api_test_framework.core.assertions - [密码为空字符串(长度0)-登录异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,162 - INFO - api_test_framework.core.assertions - [密码为空字符串(长度0)-登录异常] 开始检查错误信息...
+2026-06-15 21:20:39,163 - INFO - api_test_framework.core.assertions - [密码为空字符串(长度0)-登录异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,165 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,165 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,167 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,172 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,173 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,174 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': '   ', 'password': '123456'}
+2026-06-15 21:20:39,179 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,180 - INFO - api_test_framework.core.assertions - [用户名仅包含空格-登录异常] 开始检查状态码...
+2026-06-15 21:20:39,180 - INFO - api_test_framework.core.assertions - [用户名仅包含空格-登录异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,180 - INFO - api_test_framework.core.assertions - [用户名仅包含空格-登录异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,180 - INFO - api_test_framework.core.assertions - [用户名仅包含空格-登录异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,180 - INFO - api_test_framework.core.assertions - [用户名仅包含空格-登录异常] 开始检查错误信息...
+2026-06-15 21:20:39,180 - INFO - api_test_framework.core.assertions - [用户名仅包含空格-登录异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,182 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,183 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,186 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,190 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,191 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,192 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': '  admin  ', 'password': '123456'}
+2026-06-15 21:20:39,196 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,196 - INFO - api_test_framework.core.assertions - [用户名前后包含空格-登录异常] 开始检查状态码...
+2026-06-15 21:20:39,196 - INFO - api_test_framework.core.assertions - [用户名前后包含空格-登录异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,198 - INFO - api_test_framework.core.assertions - [用户名前后包含空格-登录异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,198 - INFO - api_test_framework.core.assertions - [用户名前后包含空格-登录异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,198 - INFO - api_test_framework.core.assertions - [用户名前后包含空格-登录异常] 开始检查错误信息...
+2026-06-15 21:20:39,198 - INFO - api_test_framework.core.assertions - [用户名前后包含空格-登录异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,199 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,200 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,203 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,208 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,209 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,210 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': '   '}
+2026-06-15 21:20:39,214 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,215 - INFO - api_test_framework.core.assertions - [密码仅包含空格-登录异常] 开始检查状态码...
+2026-06-15 21:20:39,215 - INFO - api_test_framework.core.assertions - [密码仅包含空格-登录异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,216 - INFO - api_test_framework.core.assertions - [密码仅包含空格-登录异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,216 - INFO - api_test_framework.core.assertions - [密码仅包含空格-登录异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,216 - INFO - api_test_framework.core.assertions - [密码仅包含空格-登录异常] 开始检查错误信息...
+2026-06-15 21:20:39,216 - INFO - api_test_framework.core.assertions - [密码仅包含空格-登录异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,218 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,218 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,221 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,225 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,225 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,226 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin😊', 'password': '123456'}
+2026-06-15 21:20:39,231 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,231 - INFO - api_test_framework.core.assertions - [用户名包含Unicode表情符号-登录异常] 开始检查状态码...
+2026-06-15 21:20:39,231 - INFO - api_test_framework.core.assertions - [用户名包含Unicode表情符号-登录异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,231 - INFO - api_test_framework.core.assertions - [用户名包含Unicode表情符号-登录异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,231 - INFO - api_test_framework.core.assertions - [用户名包含Unicode表情符号-登录异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,231 - INFO - api_test_framework.core.assertions - [用户名包含Unicode表情符号-登录异常] 开始检查错误信息...
+2026-06-15 21:20:39,231 - INFO - api_test_framework.core.assertions - [用户名包含Unicode表情符号-登录异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,233 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,234 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,237 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,241 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,241 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,243 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': '123😊'}
+2026-06-15 21:20:39,248 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,248 - INFO - api_test_framework.core.assertions - [密码包含Unicode表情符号-登录异常] 开始检查状态码...
+2026-06-15 21:20:39,248 - INFO - api_test_framework.core.assertions - [密码包含Unicode表情符号-登录异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,248 - INFO - api_test_framework.core.assertions - [密码包含Unicode表情符号-登录异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,248 - INFO - api_test_framework.core.assertions - [密码包含Unicode表情符号-登录异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,248 - INFO - api_test_framework.core.assertions - [密码包含Unicode表情符号-登录异常] 开始检查错误信息...
+2026-06-15 21:20:39,248 - INFO - api_test_framework.core.assertions - [密码包含Unicode表情符号-登录异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,250 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,251 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,254 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,258 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,259 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,261 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': {'key': 'Test123456'}}
+2026-06-15 21:20:39,265 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,266 - INFO - api_test_framework.core.assertions - [请求体JSON结构嵌套错误-解析异常] 开始检查状态码...
+2026-06-15 21:20:39,266 - INFO - api_test_framework.core.assertions - [请求体JSON结构嵌套错误-解析异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,266 - INFO - api_test_framework.core.assertions - [请求体JSON结构嵌套错误-解析异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,266 - INFO - api_test_framework.core.assertions - [请求体JSON结构嵌套错误-解析异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,266 - INFO - api_test_framework.core.assertions - [请求体JSON结构嵌套错误-解析异常] 开始检查错误信息...
+2026-06-15 21:20:39,266 - INFO - api_test_framework.core.assertions - [请求体JSON结构嵌套错误-解析异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,267 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,268 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,271 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,276 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,276 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,277 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={}
+2026-06-15 21:20:39,282 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,283 - INFO - api_test_framework.core.assertions - [请求体为空-请求异常] 开始检查状态码...
+2026-06-15 21:20:39,283 - INFO - api_test_framework.core.assertions - [请求体为空-请求异常] ✓ 状态码断言通过 (status=400)
+2026-06-15 21:20:39,283 - INFO - api_test_framework.core.assertions - [请求体为空-请求异常] 开始检查字段存在: ['error']...
+2026-06-15 21:20:39,283 - INFO - api_test_framework.core.assertions - [请求体为空-请求异常] ✓ 字段存在断言通过 (1个字段)
+2026-06-15 21:20:39,283 - INFO - api_test_framework.core.assertions - [请求体为空-请求异常] 开始检查错误信息...
+2026-06-15 21:20:39,283 - INFO - api_test_framework.core.assertions - [请求体为空-请求异常] ✓ 错误信息断言通过
+2026-06-15 21:20:39,285 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,285 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,287 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,293 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,293 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,295 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/error/empty | params=None
+2026-06-15 21:20:39,300 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,300 - INFO - api_test_framework.core.assertions - [文本响应-空响应体] 开始检查状态码...
+2026-06-15 21:20:39,300 - INFO - api_test_framework.core.assertions - [文本响应-空响应体] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,300 - INFO - api_test_framework.core.assertions - [文本响应-空响应体] 开始检查最大长度: 0...
+2026-06-15 21:20:39,301 - INFO - api_test_framework.core.assertions - [文本响应-空响应体] ✓ 最大长度断言通过
+2026-06-15 21:20:39,302 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,302 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,305 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,309 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,309 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,311 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/error/malformed | params=None
+2026-06-15 21:20:39,315 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,315 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] 开始检查状态码...
+2026-06-15 21:20:39,315 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,315 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] 开始检查期望文本内容: ['this is not valid json']...
+2026-06-15 21:20:39,315 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] ✓ 期望文本内容断言通过
+2026-06-15 21:20:39,315 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] 开始检查最小长度: 20...
+2026-06-15 21:20:39,315 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] ✓ 最小长度断言通过
+2026-06-15 21:20:39,316 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] 开始检查最大长度: 50...
+2026-06-15 21:20:39,316 - INFO - api_test_framework.core.assertions - [文本响应-畸形JSON字符串] ✓ 最大长度断言通过
+2026-06-15 21:20:39,318 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,319 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,321 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,326 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,326 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,328 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/robots.txt | params=None
+2026-06-15 21:20:39,331 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,332 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] 开始检查状态码...
+2026-06-15 21:20:39,332 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,332 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] 开始检查期望文本内容: ['User-agent', 'Disallow']...
+2026-06-15 21:20:39,333 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] ✓ 期望文本内容断言通过
+2026-06-15 21:20:39,333 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] 开始检查最小长度: 30...
+2026-06-15 21:20:39,333 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] ✓ 最小长度断言通过
+2026-06-15 21:20:39,333 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] 开始检查最大长度: 100...
+2026-06-15 21:20:39,333 - INFO - api_test_framework.core.assertions - [文本响应-robots.txt内容检查] ✓ 最大长度断言通过
+2026-06-15 21:20:39,335 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,335 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,337 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,343 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,343 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,389 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/register | data={'username': 'test_integration_user', 'password': 'test_password_123', 'email': 'test_integration@example.com'}
+2026-06-15 21:20:39,439 - INFO - api_test_framework.core.api_client - 返回 201 | 耗时 0.05s
+2026-06-15 21:20:39,440 - INFO - test_db_integration - === 数据对比 ===
+2026-06-15 21:20:39,441 - INFO - test_db_integration - 接口返回用户: {'id': 37, 'username': 'test_integration_user', 'email': 'test_integration@example.com', 'role': 'user', 'created_at': '2026-06-15 21:20:39'}
+2026-06-15 21:20:39,441 - INFO - test_db_integration - 数据库查询用户: {'id': 37, 'username': 'test_integration_user', 'email': 'test_integration@example.com', 'role': 'user', 'created_at': '2026-06-15 21:20:39'}
+2026-06-15 21:20:39,441 - INFO - test_db_integration - ✅ 所有字段对比通过
+2026-06-15 21:20:39,445 - INFO - test_db_integration - ✅ 测试数据已清理，删除 1 条记录
+2026-06-15 21:20:39,447 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,448 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,450 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,454 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,454 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,473 - INFO - test_db_integration - 已在数据库插入用户，ID: 38
+2026-06-15 21:20:39,473 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/register | data={'username': 'test_duplicate_user', 'password': 'different_password', 'email': 'different@example.com'}
+2026-06-15 21:20:39,494 - INFO - api_test_framework.core.api_client - 返回 409 | 耗时 0.02s
+2026-06-15 21:20:39,494 - INFO - test_db_integration - ✅ 重复用户名检测通过
+2026-06-15 21:20:39,498 - INFO - test_db_integration - ✅ 测试数据已清理
+2026-06-15 21:20:39,499 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,499 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,502 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,506 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,506 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,507 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': '123456'}
+2026-06-15 21:20:39,511 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,512 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,513 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,515 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,519 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,519 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,520 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': 'wrong_pass'}
+2026-06-15 21:20:39,525 - INFO - api_test_framework.core.api_client - 返回 401 | 耗时 0.00s
+2026-06-15 21:20:39,527 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,527 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,529 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,534 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,534 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,536 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'wrong_user', 'password': '123456'}
+2026-06-15 21:20:39,540 - INFO - api_test_framework.core.api_client - 返回 401 | 耗时 0.00s
+2026-06-15 21:20:39,542 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,542 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,544 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,548 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,548 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,549 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': '', 'password': '123456'}
+2026-06-15 21:20:39,554 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,556 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,556 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,558 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,562 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,562 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,563 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': ''}
+2026-06-15 21:20:39,568 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,569 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,569 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,571 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,576 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,577 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,578 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': '', 'password': ''}
+2026-06-15 21:20:39,582 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,584 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,584 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,587 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,591 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,591 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,592 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin@#$%^&*()_+', 'password': '123456'}
+2026-06-15 21:20:39,596 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,598 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,598 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,601 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,605 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,605 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,606 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': 'pass@#$%^&*()_+123'}
+2026-06-15 21:20:39,610 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,611 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,612 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,614 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,618 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,619 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,619 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin@#$', 'password': 'wrong@#$pass'}
+2026-06-15 21:20:39,624 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,626 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,626 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,628 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,632 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,633 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,634 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': 'wrongpass'}
+2026-06-15 21:20:39,638 - INFO - api_test_framework.core.api_client - 返回 401 | 耗时 0.00s
+2026-06-15 21:20:39,639 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,640 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,643 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,646 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,648 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,649 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': '', 'password': '123456'}
+2026-06-15 21:20:39,653 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,655 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,655 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,657 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,662 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,663 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,664 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': ''}
+2026-06-15 21:20:39,669 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,670 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,671 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,673 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,678 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,678 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,679 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin@#$', 'password': '123456'}
+2026-06-15 21:20:39,684 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,686 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,686 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,688 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,693 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,693 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,694 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': 'pass@#$'}
+2026-06-15 21:20:39,700 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,702 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,702 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,705 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,709 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,709 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,711 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'abcdefghijklmnopqrstuvwxyz1234567', 'password': '123456'}
+2026-06-15 21:20:39,715 - INFO - api_test_framework.core.api_client - 返回 401 | 耗时 0.00s
+2026-06-15 21:20:39,717 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,717 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,720 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,724 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,724 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,725 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': {'nested': 'object'}}
+2026-06-15 21:20:39,730 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,732 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,732 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,734 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,738 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,739 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,740 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={}
+2026-06-15 21:20:39,744 - INFO - api_test_framework.core.api_client - 返回 400 | 耗时 0.00s
+2026-06-15 21:20:39,747 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,747 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,749 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,753 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,753 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,754 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/product/list | params=None
+2026-06-15 21:20:39,759 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,759 - INFO - api_test_framework.core.assertions - [获取产品列表-成功] 开始检查状态码...
+2026-06-15 21:20:39,759 - INFO - api_test_framework.core.assertions - [获取产品列表-成功] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,761 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,761 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,763 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,768 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,769 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,769 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/product/list | data={}
+2026-06-15 21:20:39,774 - INFO - api_test_framework.core.api_client - 返回 405 | 耗时 0.00s
+2026-06-15 21:20:39,774 - INFO - api_test_framework.core.assertions - [获取产品列表-错误方法POST] 开始检查状态码...
+2026-06-15 21:20:39,774 - INFO - api_test_framework.core.assertions - [获取产品列表-错误方法POST] ✓ 状态码断言通过 (status=405)
+2026-06-15 21:20:39,774 - INFO - api_test_framework.core.assertions - [获取产品列表-错误方法POST] 开始检查错误信息...
+2026-06-15 21:20:39,775 - INFO - api_test_framework.core.assertions - [获取产品列表-错误方法POST] ✓ 错误信息断言通过
+2026-06-15 21:20:39,776 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,776 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,778 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,783 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,784 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,785 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/product/list | params=None
+2026-06-15 21:20:39,791 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,792 - INFO - api_test_framework.core.assertions - [验证产品字段结构] 开始检查状态码...
+2026-06-15 21:20:39,792 - INFO - api_test_framework.core.assertions - [验证产品字段结构] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:39,794 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,794 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,809 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,815 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,816 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,816 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/delay/3 | params=None
+2026-06-15 21:20:39,828 - ERROR - api_test_framework.core.api_client - 请求超时: http://127.0.0.1:5000/api/delay/3
+2026-06-15 21:20:39,829 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:39,830 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:39,833 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:39,837 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:39,837 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:39,839 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/delay/3 | params=None
+2026-06-15 21:20:42,853 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 3.01s
+2026-06-15 21:20:42,854 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:42,855 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:42,857 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:42,863 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,863 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:42,864 - INFO - test_user_flow - ============================================================
+2026-06-15 21:20:42,864 - INFO - test_user_flow - 🚀 开始测试：完整用户操作流程
+2026-06-15 21:20:42,864 - INFO - test_user_flow - ============================================================
+2026-06-15 21:20:42,865 - INFO - test_user_flow - 📋 步骤0：重置用户数据
+2026-06-15 21:20:42,865 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:42,869 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,869 - INFO - test_user_flow - ✅ 重置成功：{'status': 'reset success', 'users': {'1': {'name': '张三', 'role': '管理员'}}}
+2026-06-15 21:20:42,869 - INFO - test_user_flow - 📋 步骤1：登录
+2026-06-15 21:20:42,869 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/login | data={'username': 'admin', 'password': '123456'}
+2026-06-15 21:20:42,873 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,873 - INFO - test_user_flow - ✅ 登录成功，token: abc123
+2026-06-15 21:20:42,873 - INFO - api_test_framework.core.api_client - 已设置默认请求头: {'Authorization': 'Bearer abc123'}
+2026-06-15 21:20:42,874 - INFO - test_user_flow - 📋 步骤2：查询用户信息
+2026-06-15 21:20:42,874 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/user/info | params=None
+2026-06-15 21:20:42,878 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,878 - INFO - test_user_flow - ✅ 查询成功：{'id': 1, 'name': '张三', 'role': '管理员'}
+2026-06-15 21:20:42,878 - INFO - test_user_flow - 📋 步骤3：修改用户信息
+2026-06-15 21:20:42,878 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/update | data={'id': 1, 'name': '李四', 'role': '超级管理员'}
+2026-06-15 21:20:42,882 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,882 - INFO - test_user_flow - ✅ 修改成功：{'status': 'success', 'user': {'name': '李四', 'role': '超级管理员'}}
+2026-06-15 21:20:42,882 - INFO - test_user_flow - 📋 步骤4：验证修改
+2026-06-15 21:20:42,882 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/user/info | params=None
+2026-06-15 21:20:42,886 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,886 - INFO - test_user_flow - ✅ 验证通过：{'id': 1, 'name': '李四', 'role': '超级管理员'}
+2026-06-15 21:20:42,886 - INFO - test_user_flow - 📋 步骤5：删除用户
+2026-06-15 21:20:42,886 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/user/delete?id=1 | params=None
+2026-06-15 21:20:42,891 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,891 - INFO - test_user_flow - ✅ 删除成功：{'status': 'deleted'}
+2026-06-15 21:20:42,891 - INFO - test_user_flow - 📋 步骤6：验证删除
+2026-06-15 21:20:42,892 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/user/info | params=None
+2026-06-15 21:20:42,896 - INFO - api_test_framework.core.api_client - 返回 404 | 耗时 0.00s
+2026-06-15 21:20:42,896 - INFO - test_user_flow - ✅ 验证删除成功：{'error': '用户不存在'}
+2026-06-15 21:20:42,896 - INFO - test_user_flow - ============================================================
+2026-06-15 21:20:42,896 - INFO - test_user_flow - 🎉 完整流程测试通过
+2026-06-15 21:20:42,896 - INFO - test_user_flow - ============================================================
+2026-06-15 21:20:42,897 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:42,897 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:42,897 - INFO - test_user_flow - 🔒 资源已清理
+2026-06-15 21:20:42,898 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:42,899 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:42,902 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:42,907 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,907 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:42,908 - INFO - test_user_info - 测试：有效 Token
+2026-06-15 21:20:42,909 - INFO - api_test_framework.core.api_client - 已设置默认请求头: {'Authorization': 'Bearer abc123'}
+2026-06-15 21:20:42,909 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/user/info | params=None
+2026-06-15 21:20:42,913 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,913 - INFO - api_test_framework.core.assertions - [有效Token获取用户信息] 开始检查状态码...
+2026-06-15 21:20:42,913 - INFO - api_test_framework.core.assertions - [有效Token获取用户信息] ✓ 状态码断言通过 (status=200)
+2026-06-15 21:20:42,913 - INFO - api_test_framework.core.assertions - [有效Token获取用户信息] 开始检查字段存在: ['id', 'name', 'role']...
+2026-06-15 21:20:42,913 - INFO - api_test_framework.core.assertions - [有效Token获取用户信息] ✓ 字段存在断言通过 (3个字段)
+2026-06-15 21:20:42,914 - INFO - api_test_framework.core.assertions - [有效Token获取用户信息] 开始检查字段值...
+2026-06-15 21:20:42,914 - INFO - api_test_framework.core.assertions - [有效Token获取用户信息] ✓ 字段值断言通过
+2026-06-15 21:20:42,915 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:42,915 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:42,918 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:42,923 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,923 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:42,924 - INFO - test_user_info - 测试：无效 Token
+2026-06-15 21:20:42,924 - INFO - api_test_framework.core.api_client - 已设置默认请求头: {'Authorization': 'Bearer wrong_token'}
+2026-06-15 21:20:42,925 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/user/info | params=None
+2026-06-15 21:20:42,928 - INFO - api_test_framework.core.api_client - 返回 401 | 耗时 0.00s
+2026-06-15 21:20:42,929 - INFO - api_test_framework.core.assertions - [无效Token] 开始检查状态码...
+2026-06-15 21:20:42,929 - INFO - api_test_framework.core.assertions - [无效Token] ✓ 状态码断言通过 (status=401)
+2026-06-15 21:20:42,929 - INFO - api_test_framework.core.assertions - [无效Token] 开始检查错误信息...
+2026-06-15 21:20:42,929 - INFO - api_test_framework.core.assertions - [无效Token] ✓ 错误信息断言通过
+2026-06-15 21:20:42,931 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:42,931 - INFO - api_test_framework.core.api_client - 会话已关闭
+2026-06-15 21:20:42,933 - INFO - api_test_framework.core.api_client - POST http://127.0.0.1:5000/api/user/reset | data=None
+2026-06-15 21:20:42,937 - INFO - api_test_framework.core.api_client - 返回 200 | 耗时 0.00s
+2026-06-15 21:20:42,938 - INFO - conftest - [AUTO] Mock 服务器数据已重置
+2026-06-15 21:20:42,939 - INFO - test_user_info - 测试：缺少 Authorization 头
+2026-06-15 21:20:42,939 - INFO - api_test_framework.core.api_client - GET http://127.0.0.1:5000/api/user/info | params=None
+2026-06-15 21:20:42,942 - INFO - api_test_framework.core.api_client - 返回 401 | 耗时 0.00s
+2026-06-15 21:20:42,943 - INFO - api_test_framework.core.assertions - [缺少Authorization头] 开始检查状态码...
+2026-06-15 21:20:42,943 - INFO - api_test_framework.core.assertions - [缺少Authorization头] ✓ 状态码断言通过 (status=401)
+2026-06-15 21:20:42,943 - INFO - api_test_framework.core.assertions - [缺少Authorization头] 开始检查错误信息...
+2026-06-15 21:20:42,943 - INFO - api_test_framework.core.assertions - [缺少Authorization头] ✓ 错误信息断言通过
+2026-06-15 21:20:42,945 - INFO - api_test_framework.core.api_client - 已重置请求头为初始状态
+2026-06-15 21:20:42,945 - INFO - api_test_framework.core.api_client - 会话已关闭

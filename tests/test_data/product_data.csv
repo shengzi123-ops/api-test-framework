@@ -1,0 +1,4 @@
+case_id,case_name,url,method,headers,body,response_type,expected_status,expected_error,expected_items,unexpected_items,min_length,max_length,requires_auth
+1,获取产品列表-成功,/api/product/list,GET,"{}","",json,200,,products,"",,,false
+2,获取产品列表-错误方法POST,/api/product/list,POST,"{""Content-Type"": ""application/json""}","{}",json,405,Method Not Allowed,"",,,,false
+3,验证产品字段结构,/api/product/list,GET,"{}","",json,200,,products,"",,,false

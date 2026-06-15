@@ -1,0 +1,17 @@
+case_id,case_name,url,method,headers,body,response_type,expected_status,expected_fields,expected_values,expected_error,expected_keywords,unexpected_keywords,min_length,max_length,requires_auth
+1,用户名长度为最小值1个字符-合法登录,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""a"",""password"": ""123456""}",json,200,"token|status","{""token"": ""abc123"",""status"": ""登录成功""}",,"",,"","",false
+2,密码长度为最小值1个字符-合法登录,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""admin"",""password"": ""1""}",json,200,"token|status","{""token"": ""abc123"",""status"": ""登录成功""}",,"",,"","",false
+3,用户名长度为最大值32个字符-合法登录,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""abcdefghijklmnopqrstuvwxyz123456"",""password"": ""123456""}",json,200,"token|status","{""token"": ""abc123"",""status"": ""登录成功""}",,"",,"","",false
+4,密码长度为最大值32个字符-合法登录,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""admin"",""password"": ""abcdefghijklmnopqrstuvwxyz123456""}",json,200,"token|status","{""token"": ""abc123"",""status"": ""登录成功""}",,"",,"","",false
+5,用户名为空字符串(长度0)-登录异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": """",""password"": ""123456""}",json,400,error,,用户名不能为空,"",,"","",false
+6,密码为空字符串(长度0)-登录异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""admin"",""password"": """"}",json,400,error,,密码不能为空,"",,"","",false
+7,用户名仅包含空格-登录异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""   "",""password"": ""123456""}",json,400,error,,用户名不能为空,"",,"","",false
+8,用户名前后包含空格-登录异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""  admin  "",""password"": ""123456""}",json,400,error,,用户名包含非法字符,"",,"","",false
+9,密码仅包含空格-登录异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""admin"",""password"": ""   ""}",json,400,error,,密码不能为空,"",,"","",false
+10,用户名包含Unicode表情符号-登录异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""admin😊"",""password"": ""123456""}",json,400,error,,用户名包含非法字符,"",,"","",false
+11,密码包含Unicode表情符号-登录异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""admin"",""password"": ""123😊""}",json,400,error,,密码包含非法字符,"",,"","",false
+12,数值字段id为0-请求异常,/api/user/update,POST,"{""Content-Type"": ""application/json""}","{""id"": 0}",json,400,error,,用户ID必须大于0,"",,"","",true
+13,数值字段id为负数-请求异常,/api/user/update,POST,"{""Content-Type"": ""application/json""}","{""id"": -100}",json,400,error,,用户ID必须大于0,"",,"","",true
+14,数值字段id为超大值(超int范围)-请求异常,/api/user/update,POST,"{""Content-Type"": ""application/json""}","{""id"": 9999999999999999999}",json,404,error,,用户不存在,"",,"","",true
+15,请求体JSON结构嵌套错误-解析异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{""username"": ""admin"",""password"": {""key"": ""Test123456""}}",json,400,error,,字段 password 类型错误，期望 str,"",,"","",false
+16,请求体为空-请求异常,/api/login,POST,"{""Content-Type"": ""application/json""}","{}",json,400,error,,请求体不能为空,"",,"","",false
