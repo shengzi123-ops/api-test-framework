@@ -6,9 +6,6 @@ Pytest 配置文件
 import sys
 import os
 
-# 禁用字节码编译（不生成 .pyc 文件和 __pycache__ 目录）
-sys.dont_write_bytecode = True
-os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
 
 import pytest
 import logging
