@@ -10,8 +10,8 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 import pytest
-from api_test_framework.utils.data_loader import load_csv_test_data, parse_test_case
-from api_test_framework.core.assertions import assert_response_by_type
+from utils.data_loader import load_csv_test_data, parse_test_case
+from core.assertions import assert_response_by_type
 
 
 def get_auth_required_cases():

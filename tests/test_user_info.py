@@ -17,9 +17,9 @@ load_dotenv(env_file, override=True)
 BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:5000")
 
 import pytest
-from api_test_framework.core.api_client import ApiSession
-from api_test_framework.core.assertions import assert_response
-from api_test_framework.utils.logger import setup_logging
+from core.api_client import ApiSession
+from core.assertions import assert_response
+from utils.logger import setup_logging
 import logging
 
 # 配置日志

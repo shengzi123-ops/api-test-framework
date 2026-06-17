@@ -8,8 +8,8 @@ import csv
 # 添加项目根目录到 Python 路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from api_test_framework.core.api_client import ApiSession
-from api_test_framework.core.assertions import assert_response
+from core.api_client import ApiSession
+from core.assertions import assert_response
 
 # 加载 CSV 数据
 def load_csv(file_path):

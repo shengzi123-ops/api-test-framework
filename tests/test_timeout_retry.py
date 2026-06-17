@@ -20,7 +20,7 @@ load_dotenv(env_file, override=True)
 BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:5000")
 
 import pytest
-from api_test_framework.core.api_client import api_get
+from core.api_client import api_get
 
 
 class TestTimeout:

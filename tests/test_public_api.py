@@ -11,7 +11,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 import pytest
-from api_test_framework.core.api_client import api_get
+from core.api_client import api_get
 
 
 # 检查外部服务是否可用
