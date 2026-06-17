@@ -13,7 +13,7 @@ import logging
 # 添加项目根目录到 Python 路径（向上两级到 api_test_framework）
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(project_root))  # 再向上一级，使得可以 import api_test_framework.xxx
-
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 # 加载 .env 环境变量文件（从项目根目录加载）
 from dotenv import load_dotenv
 env_file = os.path.join(project_root, '.env')
