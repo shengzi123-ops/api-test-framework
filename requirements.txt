@@ -1,7 +1,7 @@
-flask>=2.0.0             Mock 服务器框架
-requests>=2.25.0         HTTP 请求库
-pytest>=7.0.0            测试框架
-pytest-html>=3.0.0       HTML 测试报告
-pytest-xdist>=3.0.0      并发执行
-pymysql>=1.0.0           MySQL 数据库驱动
-python-dotenv>=1.0.0     环境变量加载
+flask>=2.0.0             
+requests>=2.25.0        
+pytest>=7.0.0            
+pytest-html>=3.0.0       
+pytest-xdist>=3.0.0      
+pymysql>=1.0.0           
+python-dotenv>=1.0.0     
