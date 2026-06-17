@@ -21,7 +21,9 @@ def load_env_file():
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
                     key, value = line.split("=", 1)
-                    os.environ[key.strip()] = value.strip()
+                    # 只在环境变量不存在时设置（shell环境变量优先）
+                    if key.strip() not in os.environ:
+                        os.environ[key.strip()] = value.strip()
 
 def get_db_connection():
     """获取数据库连接"""
