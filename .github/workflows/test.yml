@@ -17,6 +17,6 @@ jobs:
           pip install -r requirements.txt
           python server/mock_server.py &
           sleep 3
-          pytest tests/ -v --html=reports/report.html --self-contained-html
+          PYTHONPATH=$PYTHONPATH:${{ github.workspace }}:${{ github.workspace }}/.. pytest tests/ -v --html=reports/report.html --self-contained-html
         env:
-          PYTHONPATH: ${{ github.workspace }}/..
+          PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/..
