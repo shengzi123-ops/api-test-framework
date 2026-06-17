@@ -19,8 +19,8 @@ from dotenv import load_dotenv
 env_file = os.path.join(project_root, '.env')
 load_dotenv(env_file, override=True)
 
-from api_test_framework.core.api_client import ApiSession
-from api_test_framework.utils.logger import setup_logging
+from core.api_client import ApiSession
+from utils.logger import setup_logging
 
 # 从环境变量读取配置
 BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:5000")
