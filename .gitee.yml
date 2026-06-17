@@ -27,7 +27,8 @@ stage:
       
       - name: 安装项目依赖
         run: pip install -r requirements.txt
-      
+      - name: 执行测试
+        run: pytest tests/ -v --html=reports/report.html --self-contained-html
       - name: 启动Mock服务
         run: |
           python server/mock_server.py &
