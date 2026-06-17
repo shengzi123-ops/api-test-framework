@@ -17,23 +17,21 @@ stage:
           - "3307:3306"
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
-      - name: 检出代码
-        run: git clone $GITEE_REPO_URL . -b $GITEE_BRANCH
-      
-      - name: 安装 Python3.10
-        run: |
-          apt update && apt install -y python3.10 python3-pip
-          ln -s /usr/bin/python3.10 /usr/bin/python
-      
+      # 内置环境自动拉取代码，无需手动git clone
+      - name: 配置国内pip源
+        run: pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
       - name: 安装项目依赖
-        run: pip install -r requirements.txt
-      - name: 执行测试
-        run: pytest tests/ -v --html=reports/report.html --self-contained-html
-      - name: 启动Mock服务
+        run: pip3 install -r requirements.txt
+
+      - name: 创建报告目录
+        run: mkdir -p reports
+
+      - name: 启动 Mock 服务
         run: |
-          python server/mock_server.py &
+          python3 server/mock_server.py &
           sleep 3
-      
+
       - name: 执行自动化测试用例
         env:
           MYSQL_PASSWORD: test_password
@@ -41,9 +39,7 @@ stage:
           BASE_URL: http://127.0.0.1:5000
           DASHSCOPE_API_KEY: ${{ env.DASHSCOPE_API_KEY }}
         run: pytest tests/ -v --html=reports/report.html --self-contained-html
-      
-      - name: 归档测试报告
-        run: echo "归档报告完成"
-        artifacts:
-          - name: test-report
-            path: reports/report.html
+    # 制品归档与steps同级，正确语法
+    artifacts:
+      - name: test-report
+        path: reports/report.html
