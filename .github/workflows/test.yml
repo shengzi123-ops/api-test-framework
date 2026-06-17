@@ -18,3 +18,5 @@ jobs:
           python server/mock_server.py &
           sleep 3
           pytest tests/ -v --html=reports/report.html --self-contained-html
+        env:
+          PYTHONPATH: ${{ github.workspace }}/..
