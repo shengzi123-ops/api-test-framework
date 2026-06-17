@@ -25,10 +25,12 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y mysql-client
       - name: 安装Python依赖
         run: pip install -r requirements.txt
+      - name: 创建报告目录
+        run: mkdir -p reports
       - name: 等待MySQL服务就绪
         run: |
           for i in {1..30}; do
-            mysql -h 127.0.0.1 -u root -ptest_password -e "SELECT 1" && break
+            mysql -h 127.0.0.1 -u root -ptest_password -e "SELECT 1" 2>/dev/null && echo "MySQL已就绪" && break
             echo "等待MySQL启动... ($i/30)"
             sleep 2
           done
@@ -36,19 +38,41 @@ jobs:
         run: |
           mysql -h 127.0.0.1 -u root -ptest_password test_db < scripts/init_db.sql
           mysql -h 127.0.0.1 -u root -ptest_password -e "SHOW TABLES FROM test_db;"
-      - name: 后台启动Mock服务
+      - name: 执行测试（包含Mock服务）
         run: |
+          # 设置环境变量
+          export DB_HOST=127.0.0.1
+          export DB_PORT=3306
+          export DB_USER=root
+          export DB_PASSWORD=test_password
+          export DB_DATABASE=test_db
+          export BASE_URL=http://127.0.0.1:5000
+          export PYTHONPATH=$PYTHONPATH:${{ github.workspace }}:${{ github.workspace }}/..
+          
+          # 后台启动Mock服务
           python server/mock_server.py &
+          MOCK_PID=$!
+          echo "Mock服务PID: $MOCK_PID"
+          
+          # 等待Mock服务启动
           sleep 5
-      - name: 执行测试
-        run: |
-          PYTHONPATH=$PYTHONPATH:${{ github.workspace }}:${{ github.workspace }}/.. \
-          DB_HOST=127.0.0.1 \
-          DB_PORT=3306 \
-          DB_USER=root \
-          DB_PASSWORD=test_password \
-          DB_DATABASE=test_db \
-          BASE_URL=http://127.0.0.1:5000 \
-          pytest tests/ -v --html=reports/report.html --self-contained-html
-        env:
-          PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/..
+          
+          # 检查Mock服务是否运行
+          if ps -p $MOCK_PID > /dev/null; then
+            echo "Mock服务运行正常"
+          else
+            echo "Mock服务启动失败"
+            exit 1
+          fi
+          
+          # 执行测试
+          pytest tests/ -v --html=reports/report.html --self-contained-html --tb=short
+          
+          # 保存退出码
+          TEST_EXIT_CODE=$?
+          
+          # 停止Mock服务
+          kill $MOCK_PID 2>/dev/null || true
+          
+          # 返回测试退出码
+          exit $TEST_EXIT_CODE
