@@ -17,17 +17,16 @@ stage:
           - "3307:3306"
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
-      # 内置环境自动拉取代码，无需手动git clone
       - name: 配置国内pip源
         run: pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
       - name: 安装项目依赖
         run: pip3 install -r requirements.txt
 
-      - name: 创建报告目录
+      - name: 提前创建报告目录
         run: mkdir -p reports
 
-      - name: 启动 Mock 服务
+      - name: 后台启动Mock服务并等待就绪
         run: |
           python3 server/mock_server.py &
           sleep 3
@@ -39,7 +38,7 @@ stage:
           BASE_URL: http://127.0.0.1:5000
           DASHSCOPE_API_KEY: ${{ env.DASHSCOPE_API_KEY }}
         run: pytest tests/ -v --html=reports/report.html --self-contained-html
-    # 制品归档与steps同级，正确语法
-    artifacts:
-      - name: test-report
-        path: reports/report.html
+
+artifacts:
+  - name: test-report
+    path: reports/report.html
