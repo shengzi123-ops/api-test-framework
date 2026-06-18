@@ -94,13 +94,14 @@ def run_tests():
         ],
         capture_output=True,
         text=True,
-        encoding='utf-8'
+        encoding='utf-8',
+        errors='replace'
     )
     
     logging.info(f"测试完成，退出码: {result.returncode}")
     
     if result.stdout:
-        for line in result.stdout.split('\n')[-10:]:
+        for line in result.stdout.split('\n')[-15:]:
             logging.info(f"测试输出: {line}")
     
     if result.stderr:
