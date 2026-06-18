@@ -8,9 +8,11 @@ echo ===============================================
 echo.
 
 set SCRIPT_DIR=%~dp0
-set PROJECT_ROOT=%SCRIPT_DIR:~0,-1%
+cd /d "%SCRIPT_DIR%.."
+set PROJECT_ROOT=%cd%
 
-cd /d "%PROJECT_ROOT%"
+echo [INFO] Project root: %PROJECT_ROOT%
+echo.
 
 echo [INFO] Checking Python environment...
 python --version >nul 2>&1
