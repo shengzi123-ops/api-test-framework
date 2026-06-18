@@ -1,5 +1,7 @@
 # API Test Framework
 
+![Tests](https://github.com/shengzi123-ops/api-test-framework/actions/workflows/test.yml/badge.svg)
+
 ## 1. 项目简介
 
 基于 pytest + requests + Flask + MySQL 的接口自动化测试框架，支持数据驱动、Session管理、超时重试、失败响应保存、并发执行，集成数据库验证能力。
@@ -293,32 +295,7 @@ def reset_server_data(api_session):
     yield
 ```
 
-### 5.7 pytest 钩子函数
-
-框架使用 pytest 钩子函数实现自动化流程：
-
-**环境自检钩子**（`conftest.py`）：
-```python
-def pytest_sessionstart(session):
-    """测试会话开始时执行环境自检"""
-    checker = ServiceChecker()
-    checker.run_all_checks()  # 检查 MySQL、Mock 服务器等依赖
-```
-
-**测试完成钩子**（`run_tests.py`）：
-```python
-def pytest_sessionfinish(session, exitstatus):
-    """测试会话结束时自动生成报告"""
-    # 生成测试统计报告
-    generate_report()
-```
-
-**钩子函数作用**：
-- `pytest_sessionstart`：在所有测试开始前执行环境检查，确保依赖服务可用
-- `pytest_sessionfinish`：在所有测试完成后执行清理和报告生成
-- 支持自定义扩展，如发送邮件通知、质量门禁检查等
-
-### 5.8 并发执行与风险分析
+### 5.7 并发执行与风险分析
 
 支持 pytest-xdist 并发执行，提升测试效率：
 
@@ -334,7 +311,7 @@ pytest tests/ -m "not db_integration" -n 4 -v
 - 并发测试可能冲突的用例需要加锁或串行执行
 - 数据库集成测试建议单独运行，避免并发写入冲突
 
-### 5.9 Mock 服务器统一校验
+### 5.8 Mock 服务器统一校验
 
 Mock 服务器提供完整的请求验证能力：
 
@@ -343,7 +320,7 @@ Mock 服务器提供完整的请求验证能力：
 - **边界值校验**：支持长度限制、特殊字符等边界测试
 - **错误模拟**：提供 500 错误、畸形 JSON、空响应等错误场景
 
-### 5.10 数据库集成验证
+### 5.9 数据库集成验证
 
 集成真实数据库，支持端到端测试：
 
@@ -371,9 +348,9 @@ def test_register_db_integration(api_session, db_connection):
     delete_user_by_username(cursor, conn, "test_user")
 ```
 
-## 6. 测试数据说明
+## 5. 测试数据说明
 
-### 6.1 测试数据文件
+### 5.1 测试数据文件
 
 | 文件 | 用途 |
 |------|------|
@@ -381,7 +358,7 @@ def test_register_db_integration(api_session, db_connection):
 | `test_data/product_data.csv` | 产品列表接口测试数据 |
 | `test_data/test_boundary_data.csv` | 边界值测试数据 |
 
-### 6.2 数据字段说明
+### 5.2 数据字段说明
 
 CSV 文件支持以下字段：
 
@@ -397,7 +374,7 @@ CSV 文件支持以下字段：
 | `expected_error` | 期望错误信息 |
 | `requires_auth` | 是否需要鉴权（true/false） |
 
-## 7. 输出说明
+## 6. 输出说明
 
 ### 7.1 测试报告
 
@@ -405,17 +382,17 @@ CSV 文件支持以下字段：
 - `report.html` - 普通报告
 - `final_report.html` - 完整报告（包含 CSS）
 
-### 7.2 日志文件
+### 6.2 日志文件
 
 运行日志保存在 `logs/` 目录，格式：`test_YYYYMMDD.log`
 
-### 7.3 失败响应
+### 6.3 失败响应
 
 测试失败时，响应内容自动保存到 `failed_responses/` 目录，文件命名格式：`{case_name}_{timestamp}.{json|txt|bin}`
 
-## 8. CI/CD 流水线
+## 7. CI/CD 流水线
 
-### 8.1 自动触发条件
+### 7.1 自动触发条件
 
 项目已配置 GitHub Actions 流水线，支持以下触发方式：
 
@@ -424,7 +401,7 @@ CSV 文件支持以下字段：
 | **push** | 推送到 `main` 分支 | 代码变更时自动运行 |
 | **schedule** | 每天 UTC 时间 6:00 | 定时自动运行测试 |
 
-### 8.2 定时任务配置
+### 7.2 定时任务配置
 
 流水线会**每天早上 6:00（UTC）**自动运行测试：
 
@@ -440,32 +417,32 @@ on:
 **时区说明**：
 - UTC 时间 6:00 = 北京时间 14:00
 
-### 8.3 查看流水线状态
+### 7.3 查看流水线状态
 
 1. 打开 GitHub 仓库：https://github.com/shengzi123-ops/api-test-framework
 2. 点击 **Actions** 标签
 3. 查看流水线运行状态和历史记录
 
-### 8.4 流水线输出
+### 7.4 流水线输出
 
 - **测试报告**：自动生成 HTML 报告，可从 Artifacts 下载
 - **运行日志**：完整的测试输出日志
 - **状态徽章**：显示最近一次运行的状态
 
-## 10. 常见问题
+## 8. 常见问题
 
-### 10.1 Mock 服务器无法启动
+### 8.1 Mock 服务器无法启动
 
 检查端口是否被占用：
 ```bash
 netstat -ano | findstr 5000
 ```
 
-### 10.2 数据库连接失败
+### 8.2 数据库连接失败
 
 确认 .env 文件中的数据库配置正确，且 MySQL 服务已启动。
 
-### 10.3 测试数据残留
+### 8.3 测试数据残留
 
 如果测试数据未清理，可以手动执行：
 ```python
@@ -477,6 +454,6 @@ delete_user_by_username(cursor, conn, "test_user")
 conn.close()
 ```
 
-## 11. 许可证
+## 9. 许可证
 
 本项目仅供学习交流使用。
