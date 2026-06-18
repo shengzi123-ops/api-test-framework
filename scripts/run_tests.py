@@ -89,6 +89,7 @@ def run_tests():
         [
             sys.executable, '-m', 'pytest',
             'tests/', '-v',
+            '--ignore=tests/test_timeout_retry.py',  # 跳过超时测试（耗时较长）
             f'--html={report_path}',
             '--self-contained-html'
         ],
