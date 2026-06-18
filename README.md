@@ -409,24 +409,63 @@ CSV 文件支持以下字段：
 
 运行日志保存在 `logs/` 目录，格式：`test_YYYYMMDD.log`
 
-### 6.3 失败响应
+### 7.3 失败响应
 
 测试失败时，响应内容自动保存到 `failed_responses/` 目录，文件命名格式：`{case_name}_{timestamp}.{json|txt|bin}`
 
-## 8. 常见问题
+## 8. CI/CD 流水线
 
-### 8.1 Mock 服务器无法启动
+### 8.1 自动触发条件
+
+项目已配置 GitHub Actions 流水线，支持以下触发方式：
+
+| 触发方式 | 条件 | 说明 |
+|----------|------|------|
+| **push** | 推送到 `main` 分支 | 代码变更时自动运行 |
+| **schedule** | 每天 UTC 时间 6:00 | 定时自动运行测试 |
+
+### 8.2 定时任务配置
+
+流水线会**每天早上 6:00（UTC）**自动运行测试：
+
+```yaml
+# .github/workflows/test.yml
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * *'  # 每天 UTC 6:00
+```
+
+**时区说明**：
+- UTC 时间 6:00 = 北京时间 14:00
+
+### 8.3 查看流水线状态
+
+1. 打开 GitHub 仓库：https://github.com/shengzi123-ops/api-test-framework
+2. 点击 **Actions** 标签
+3. 查看流水线运行状态和历史记录
+
+### 8.4 流水线输出
+
+- **测试报告**：自动生成 HTML 报告，可从 Artifacts 下载
+- **运行日志**：完整的测试输出日志
+- **状态徽章**：显示最近一次运行的状态
+
+## 10. 常见问题
+
+### 10.1 Mock 服务器无法启动
 
 检查端口是否被占用：
 ```bash
 netstat -ano | findstr 5000
 ```
 
-### 8.2 数据库连接失败
+### 10.2 数据库连接失败
 
 确认 .env 文件中的数据库配置正确，且 MySQL 服务已启动。
 
-### 8.3 测试数据残留
+### 10.3 测试数据残留
 
 如果测试数据未清理，可以手动执行：
 ```python
@@ -438,6 +477,6 @@ delete_user_by_username(cursor, conn, "test_user")
 conn.close()
 ```
 
-## 9. 许可证
+## 11. 许可证
 
 本项目仅供学习交流使用。
