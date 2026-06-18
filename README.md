@@ -234,7 +234,7 @@ status, body = api_get_with_retry(
 # JSON 断言示例
 assert_response_by_type(200, body, "json", {
     "expected_status": 200,
-    "expected_keys": ["token", "status"],
+    "expected_items": ["token", "status"],
     "expected_values": {"status": "登录成功"}
 })
 
